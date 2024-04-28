@@ -23,13 +23,15 @@ def profile():
 def blog_list(blog_id):
     return "你所访问的博客是：%s" % blog_id
 
+
+# 查询字符串方式传参
 # book/list:该接口为书的第一页数据
 # book/list?page=2:这种方式可以获取第二页数据，http协议规定用?传参
 @app.route("/book/list")
 def book_list():
     # arguments:参数
     # request.args:类字典类型
-    page=request.args.get('page', default=1,type=int)
+    page = request.args.get("page", default=1, type=int)
     return "您获取的是第{}页".format(page)
 
 
