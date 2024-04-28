@@ -9,9 +9,13 @@ app = Flask(__name__)
 def hello_world():
     return 'hello  world'
 
+# 定义无参数的URL
 @app.route('/profile')
 def profile():
     return '我是个人中心'
+
+# 定义有参数的url
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
